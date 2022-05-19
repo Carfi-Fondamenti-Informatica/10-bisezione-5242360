@@ -19,22 +19,21 @@ bool prima(float a, float b){
 
 
 int main() {
-    
     float a,b,x,err;
     do {
         cout << "inserire estremi";
         cin >> a;
         cin >> b;
-    }while(prima(a,b)==1);
-    a=(a+b)/2;
+    }while(prima(a,b));
     do{
-        if(f(a)==0){
+        x=(a+b)/2;
+        if(f(x)==0){
             cout<<int(x*10000)/10000.0<<endl;
         }else {
-            if (f(a) * f(b) < 0) {
-                a = x;
-            } else {
+            if (f(a) * f(x) < 0) {
                 b = x;
+            } else {
+                a = x;
             }
             err = abs((b - a) / 2);
         }
