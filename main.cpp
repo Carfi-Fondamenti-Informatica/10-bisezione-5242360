@@ -19,6 +19,7 @@ bool prima(float a, float b){
 
 
 int main() {
+    
     float a,b,x,err;
     do {
         cout << "inserire estremi";
